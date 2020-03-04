@@ -3,16 +3,16 @@ package List;
 import org.junit.*;
 import java.util.*;
 
-public class LinkedListTest {
+public class HashMapTest {
 
-	private static LinkedList<String> list = new LinkedList<>();
-	private final static int N = 1000000, M = 100;
+	private static HashMap<Integer, String> list = new HashMap<>();
+	private final static int N = 1000000, M = 10;
 	private final static String STR = "abcdefg";
 
 	@BeforeClass
 	public static void CreateList() {
 		for (int i = 0; i < N; i++) {
-			list.add(STR);
+			list.put(i, STR);
 		}
 	}
 
@@ -28,8 +28,8 @@ public class LinkedListTest {
 	@Test
 	public void Inner_Iteration() {
 		for (int k = 0; k < M; k++) {
-			for (String str : list) {
-				String s = str;
+			for (Integer i : list.keySet()) {
+				String s = list.get(i);
 			}
 		}
 	}
@@ -37,9 +37,9 @@ public class LinkedListTest {
 	@Test
 	public void Explicit_Iteration() {
 		for (int k = 0; k < M; k++) {
-			Iterator<String> it = list.iterator();
+			Iterator<Integer> it = list.keySet().iterator();
 			while (it.hasNext()) {
-				String str = it.next();
+				String str = list.get(it.next());
 			}
 		}
 	}

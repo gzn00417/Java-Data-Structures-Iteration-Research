@@ -3,10 +3,10 @@ package List;
 import org.junit.*;
 import java.util.*;
 
-public class LinkedListTest {
+public class HashSetTest {
 
-	private static LinkedList<String> list = new LinkedList<>();
-	private final static int N = 1000000, M = 100;
+	private static HashSet<String> list = new HashSet<>();
+	private final static int N = 1000000, M = 1000000;
 	private final static String STR = "abcdefg";
 
 	@BeforeClass
