@@ -6,13 +6,13 @@ import java.util.*;
 public class ArrayListTest {
 
     private static ArrayList<String> list = new ArrayList<>();
-    private final static int N = 1000000, M = 1000;
+    private final static int N = 1000000, M = 100;
     private final static String STR = "abcdefg";
 
     @BeforeClass
     public static void CreateList() {
 	for (int i = 0; i < N; i++) {
-	    list.add(STR);
+	    list.add(STR+String.valueOf((int)(Math.random()*N)));
 	}
     }
 
