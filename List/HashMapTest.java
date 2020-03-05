@@ -12,7 +12,7 @@ public class HashMapTest {
 	@BeforeClass
 	public static void CreateList() {
 		for (int i = 0; i < N; i++) {
-			list.put(i, STR);
+			list.put((int)(Math.random()*N), STR+String.valueOf((int)(Math.random()*N)));
 		}
 	}
 
