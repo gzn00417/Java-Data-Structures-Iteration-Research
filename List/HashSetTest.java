@@ -6,13 +6,13 @@ import java.util.*;
 public class HashSetTest {
 
 	private static HashSet<String> list = new HashSet<>();
-	private final static int N = 1000000, M = 1000000;
+	private final static int N = 1000000, M = 100;
 	private final static String STR = "abcdefg";
 
 	@BeforeClass
 	public static void CreateList() {
 		for (int i = 0; i < N; i++) {
-			list.add(STR);
+			list.add(STR+String.valueOf((int)(Math.random()*N)));
 		}
 	}
 
