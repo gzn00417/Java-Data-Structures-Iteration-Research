@@ -12,7 +12,7 @@ public class LinkedListTest {
 	@BeforeClass
 	public static void CreateList() {
 		for (int i = 0; i < N; i++) {
-			list.add(STR+String.valueOf((int)(Math.random()*N)));
+			list.add(STR + String.valueOf((int) (Math.random() * N)));
 		}
 	}
 
